@@ -7,14 +7,12 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (req, res)=> {
-  res.status.json({
-    status: 'success',
-    data: {
+  res.status(200).json({
       slackUsername: 'Pinocchio',
       backend: true,
       age: 23,
       bio: 'i am a boy trying to make it'
-    }
+  
   })
 })
 app.listen(PORT,()=>{
